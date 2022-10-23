@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        name: リベ名
+        profile: プロフィールURL
+        password: パスワード
+        password_confirmation: 確認用パスワード
