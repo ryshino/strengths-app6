@@ -1,0 +1,26 @@
+<h1>ユーザー登録</h1>
+
+<%= form_with model: @user, local: true do |f| %>
+  <% if @user.errors.any? %>
+    <strong><%= @user.errors.count %>個のエラーがあります。</strong>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.label :name, '名前' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :profile, 'URL' %>
+  <%= f.text_field :profile %>
+
+  <%= f.label :password, 'パスワード(6文字以上)' %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation, 'パスワード(確認)' %>
+  <%= f.password_field :password_confirmation %>
+
+  <%= f.submit '登録' %>
+<% end %>
