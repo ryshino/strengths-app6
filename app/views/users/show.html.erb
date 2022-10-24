@@ -1,1 +1,5 @@
-<%= @user.name %>
+<h1>ユーザー情報</h1>
+
+<p>リベネーム：<%= current_user.name %></p>
+<p><%= link_to 'ログアウト', logout_path, method: :delete %></p>
+<p><%= link_to '登録解除', user_path(@user), method: :delete, data: { confirm: '本当に登録解除しますか？' } %></p>
