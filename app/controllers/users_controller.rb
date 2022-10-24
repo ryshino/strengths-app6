@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: [:show, :destroy]
+
   def new
     @user = User.new
   end
@@ -20,8 +22,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    user = User.find(params[:id])
-    user.destroy
+    current_user.destroy
     redirect_to new_user_path
   end
 
