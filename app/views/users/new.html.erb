@@ -19,8 +19,7 @@
   <%= f.label :password, 'パスワード(6文字以上)' %>
   <%= f.password_field :password %>
 
-  <%= f.label :password_confirmation, 'パスワード(確認)' %>
-  <%= f.password_field :password_confirmation %>
-
   <%= f.submit '登録' %>
 <% end %>
+
+<%= link_to "ログイン", login_path %>
