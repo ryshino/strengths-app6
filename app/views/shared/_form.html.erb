@@ -1,0 +1,14 @@
+<%= form_with model: @user, local: true do |f| %>
+  <%= render 'shared/error_messages' %>
+
+  <%= f.label :name, '名前' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :profile, 'URL' %>
+  <%= f.text_field :profile %>
+
+  <%= f.label :password, 'パスワード(6文字以上)' %>
+  <%= f.password_field :password %>
+
+  <%= f.submit '登録' %>
+<% end %>
