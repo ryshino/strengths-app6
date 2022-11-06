@@ -30,6 +30,7 @@ class UsersController < ApplicationController
       # 更新に成功した場合を扱う。
     else
       render 'edit'
+    end
   end
 
   def destroy
