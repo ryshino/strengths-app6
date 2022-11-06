@@ -2,7 +2,7 @@ class User < ApplicationRecord
   #remember_tokenの仮想の属性は自分で定義する必要がある
   attr_accessor :remember_token
 
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 50 }
   validates :profile, presence: true, uniqueness: true
   validate :check_profile
   validates :password, presence: true, length: { minimum: 6 }
